@@ -1,0 +1,15 @@
+
+.jumbotron.other-color {
+  background-color: #CF142B !important;
+  text-align:center;
+
+}
+
+.wrapper {
+  margin: auto;
+  display: block;
+}
+
+small {
+  font-color: white; !important;
+}
