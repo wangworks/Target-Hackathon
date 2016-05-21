@@ -1,9 +1,19 @@
 
 .jumbotron.other-color {
+  padding: 0;
+  background-color: #FF0101 !important;
+  height: 400px;
+}
+
+#jumboText {
+  padding-top: 100px;
+  text-align: left;
+}
+/*.jumbotron.other-color {
   background-color: #CF142B !important;
   text-align:center;
 
-}
+}*/
 
 #mainNav {
   color: #C40000 !important;
