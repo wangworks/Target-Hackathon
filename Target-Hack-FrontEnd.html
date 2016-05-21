@@ -23,19 +23,86 @@
 <div class="jumbotron other-color">
   <h1> Expect More, Wait Less <small> Spend less time in line </small></h1>
     <div class="wrapper">
+      <div id="drop-down">
+        <select name="hours">
+          <option value="sevenAM">7 A.M.</option>
+          <option value="eightAM">8 A.M.</option>
+          <option value="nineAM">9 A.M.</option>
+          <option value="tenAM">10 A.M.</option>
+          <option value="elevenAM">11 A.M.</option>
+          <option value="twelvePM">12 P.M.</option>
+          <option value="onePM">1 P.M.</option>
+          <option value="twoPM">2 P.M.</option>
+          <option value="threePM">3 P.M.</option>
+          <option value="fourPM">4 P.M.</option>
+          <option value="fivePM">5 P.M.</option>
+          <option value="sixPM">6 P.M.</option>
+          <option value="sevenPM">7 P.M.</option>
+          <option value="eightPM">8 P.M.</option>
+          <option value="ninePM">9 P.M.</option>
+          <option value="tenPM">10 P.M.</option>
+          <option value="elevenPM">11 P.M.</option>
+        </select>
+      </div>
+
+    
       <p><a class="btn btn-primary btn-lg " href="#" role="button"> Find stores </a></p>
        <div id="map" ></div>  
     </div>
 </div>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
-    </script>
+   
+<script>
+
+var map;
+        function initialize()
+        {
+            var myLatlng1 = new google.maps.LatLng(53.65914, 0.072050);
+
+            var mapOptions = 
+            {
+                zoom: 10,
+                center: myLatlng1,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+
+
+        if (navigator.geolocation) {
+     navigator.geolocation.getCurrentPosition(function (position) {
+         initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+         map.setCenter(initialLocation);
+     });
+ }
+
+         
+
+           navigator.geolocation.getCurrentPosition(showPosition);  
+        }
+
+        var showPosition = function (position) 
+           {
+               map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude), 16);
+
+           }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAzivmuALt3pxr6235skezostTvaIFp04&callback=initMap"
     async defer></script>
 </body>

@@ -22,3 +22,7 @@ small {
     width: 100%;
     position: absolute;
  }
+
+ #drop-down{
+  padding-bottom: 25px;
+}
