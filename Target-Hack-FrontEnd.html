@@ -20,6 +20,18 @@
 
 <body>
 
+  <nav class="navbar navbar-fixed-top navbar-default" id="mainNav">
+    <a class="navbar-brand"> Navigate </a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#top"> Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#intro"> About </a>
+      </li>
+    </ul>
+  </nav>
+
 <div class="jumbotron other-color">
   <h1> Expect More, Wait Less <small> Spend less time in line </small></h1>
     <div class="wrapper">
@@ -45,12 +57,22 @@
         </select>
       </div>
 
-    
-      <p><a class="btn btn-primary btn-lg " href="#" role="button"> Find stores </a></p>
-       <div id="map" ></div>  
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Enter Zip Code">
+      </div>
+      <button type="submit" class="btn btn-default">Find store</button>
+
     </div>
+
+    <div id="map" ></div>
+
 </div>
-   
+
+<div class="container" id="body">
+
+
+</div>
+
 <script>
 
 var map;
@@ -58,7 +80,7 @@ var map;
         {
             var myLatlng1 = new google.maps.LatLng(53.65914, 0.072050);
 
-            var mapOptions = 
+            var mapOptions =
             {
                 zoom: 10,
                 center: myLatlng1,
@@ -75,12 +97,12 @@ var map;
      });
  }
 
-         
 
-           navigator.geolocation.getCurrentPosition(showPosition);  
+
+           navigator.geolocation.getCurrentPosition(showPosition);
         }
 
-        var showPosition = function (position) 
+        var showPosition = function (position)
            {
                map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude), 16);
 

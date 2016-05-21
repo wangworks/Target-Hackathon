@@ -5,13 +5,30 @@
 
 }
 
+#mainNav {
+  color: #C40000 !important;
+}
+
+
 .wrapper {
   margin: auto;
   display: block;
+  width: 25%;
+
 }
+
 
 small {
   font-color: white; !important;
+}
+
+body {
+  background-color: white;
+  padding-top: 100px;
+}
+
+#catchPhrase {
+  color:white !important;
 }
 
 
