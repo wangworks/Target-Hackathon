@@ -24,9 +24,20 @@
   <h1> Expect More, Wait Less <small> Spend less time in line </small></h1>
     <div class="wrapper">
       <p><a class="btn btn-primary btn-lg " href="#" role="button"> Find stores </a></p>
+       <div id="map" ></div>  
     </div>
 </div>
-
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAzivmuALt3pxr6235skezostTvaIFp04&callback=initMap"
+    async defer></script>
 </body>
 
 </html>
