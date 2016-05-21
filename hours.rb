@@ -67,3 +67,22 @@ lakeSTBEST = 0
 brightonBEST = 0
 nicolletBEST = 0
 fifthStBEST = 0
+
+
+class store
+	atrr_accessor :name, :x, :y, :array
+end
+
+LS = store.new("Lake St", 44.949411, -93.2370545, lakeSt)
+Br = store.new("Brighton", 45.0044664, -93.2315656, brighton)
+Ni = store.new("Nicollet", 44.9749685, -93.2742589, nicollet)
+FS = store.new("Fifth St", 44.9820453, -93.235701, fifthSt)
+
+#compare how busy the stores are, and set best to the least busy#
+best = LS
+if Br.array[day][time] < best.array[day][time]
+	best = Br
+if Ni.array[day][time] < best.array[day][time]
+	best = Ni
+if FS.array[day][time] < best.array[day][time]
+	best = FS
